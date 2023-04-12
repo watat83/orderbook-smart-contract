@@ -24,3 +24,27 @@ An orderbook is a mechanism used by exchanges to list and match buy and sell ord
 
 - Sorting Orders: To optimize order matching, the orderbook smart contract typically maintains orders in a sorted order, with buy orders sorted by price in descending order and sell orders sorted by price in ascending order.
 - Inserting and Removing Orders: The smart contract should handle the insertion and removal of orders efficiently while preserving the sorted order of the orderbook.
+
+```
+// Example of an Order struct
+
+struct Order {
+
+    uint256 id;
+
+    address trader;
+
+    bool isBuyOrder;
+
+    uint256 price;
+
+    uint256 quantity;
+
+    bool isFilled;
+
+    address baseToken; // ERC20 token address for the base asset
+
+    address quoteToken; // ERC20 token address for the quote asset (e.g., stablecoin)
+
+}
+```
